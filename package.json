@@ -4,7 +4,7 @@
   "main": "teste.js",
   "scripts": {
     "test": "ts-node ./src/teste.ts",
-    "start": "ts-node ./src/teste.ts"
+    "start": "tsx watch ./src/teste.ts"
   },
   "author": "caio",
   "license": "ISC",
@@ -12,5 +12,8 @@
   "devDependencies": {
     "ts-node": "^10.9.2",
     "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "tsx": "^4.19.3"
   }
 }
