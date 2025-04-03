@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "main": "teste.js",
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node teste.js"
+    "start": "ts-node teste.ts"
   },
   "author": "caio",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "ts-node": "^10.9.2",
     "typescript": "^5.8.2"
   }
 }
