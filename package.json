@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "main": "teste.js",
   "scripts": {
-    "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node teste.ts"
+    "test": "ts-node ./src/teste.ts",
+    "start": "ts-node ./src/teste.ts"
   },
   "author": "caio",
   "license": "ISC",
