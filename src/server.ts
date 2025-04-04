@@ -16,8 +16,17 @@ server.get('/ping', (req, res) => {
 server.get('/produtos', (req, res) => {
     res.json({ produtos: [] })
 })
-server.post('/produtos', (req, res) => {
-    res.json({ produtos: [] })
+server.get('/produtos/:id', (req, res) => {
+
+    const { id } = req.params
+    res.json({ product: 'teste', price: 10, id: id })
+})
+server.get('/voos/:from/:to', (req, res) => {
+
+    const { from, to } = req.params
+
+    console.log(req.params)
+    res.json({ flight: { from: from.toUpperCase(), to: to.toUpperCase() } })
 })
 
 server.get('/', (req, res) => {
