@@ -2,6 +2,7 @@ import express from "express";
 import helmet from "helmet";
 import path from 'path';
 import router from './routes'
+import { errorHandler, notFoundRequest } from "./routes/errorhandler";
 
 
 const server = express()
@@ -13,6 +14,8 @@ server.use(express.static(path.join(__dirname, '../public'))) // Middleware to s
 
 
 server.use('/', router) // Middleware to use the routes defined in the router
+server.use(notFoundRequest) // Middleware to handle 404 errors
+server.use(errorHandler) // Middleware to handle 500 errors
 
 
 server.listen(3000, () => {

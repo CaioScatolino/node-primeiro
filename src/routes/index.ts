@@ -8,7 +8,9 @@ router.use('/produtos', produtosRouter) // Middleware to use the produtos routes
 router.use('/voos', voosRouter) // Middleware to use the produtos routes
 
 router.get('/ping', (req, res) => {
+
     res.json({ message: 'pong' })
+    
 })
 
 router.get('/', (req, res) => {
