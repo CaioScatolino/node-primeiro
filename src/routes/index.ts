@@ -5,7 +5,7 @@ import { interferir } from '../middlewares/interferir';
 
 const router = express.Router();
 
-router.use(interferir)
+// router.use(interferir)
 
 router.use('/produtos', produtosRouter) // Middleware to use the produtos routes
 router.use('/voos', voosRouter) // Middleware to use the produtos routes
@@ -19,8 +19,12 @@ router.get('/ping', (req, res) => {
 
 router.get('/', (req, res) => {
 
-    let name = req.query.name || 'World'
-    let age = req.query.age || 0
+    console.log(`PARAMS`, req.params)
+    console.log(`QUERY`, req.query)
+    console.log(`BODY`, req.body)
+
+    let name =  'World'
+    let age =  0
     res.json({ name, age })
 })
 
