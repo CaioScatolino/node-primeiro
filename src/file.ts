@@ -1,15 +1,20 @@
-import { writeFile } from "fs/promises"
+import { readFile, writeFile } from "fs/promises"
 
-const exec = async() => {
+const exec = async () => {
 
-    console.log('Creating file...')
+    // console.log('Creating file...')
 
-    const list = [1, 2, 3, 4, 5]
-    const listTxt = list.join('\n')
+    // const list = [1, 2, 3, 4, 5]
+    // const listTxt = list.join('\n')
 
-    await writeFile('./teste.txt', listTxt)
-    console.log('File created!')
+    // await writeFile('./teste.txt', listTxt)
+    // console.log('File created!')
 
+    const fileContent = await readFile('./teste.txt', 'utf-8')
+    console.log(fileContent)
+
+    const list = fileContent.split('\n')
+    console.log(list)
 }
 
 exec()
