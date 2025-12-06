@@ -9,7 +9,15 @@ server.use(express.json());
 server.use(express.urlencoded({extended: true}));
 server.use(express.static(path.join(__dirname, '../public')));
 
-
+server.get('/ping', (req, res) => {
+    res.json({ message: 'pong' });
+});
+server.get('/produtos', (req, res) => {
+    res.json({ produtos: [] });
+});
+server.post('/produtos', (req, res) => {
+    res.json({ produtos: [] });
+});
 
 server.get('/', (req, res) => {
     let name = `Caio`
