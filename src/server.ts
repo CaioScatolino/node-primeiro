@@ -2,8 +2,7 @@ import express from 'express';
 import helmet from 'helmet';
 import path from 'path';
 import router from './routes';
-import produtosRouter from './routes/produtos';
-import voosRouter from './routes/voos';
+
 
 const server = express();
 
@@ -13,8 +12,6 @@ server.use(express.urlencoded({ extended: true }));
 server.use(express.static(path.join(__dirname, '../public')));
 
 server.use('/', router);
-server.use('/produtos', produtosRouter);
-server.use('/voos', voosRouter);
 
 server.listen(3000, () => {
     console.log(`Server is running on http://localhost:3000`);
