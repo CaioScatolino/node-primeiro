@@ -11,13 +11,14 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@rocketseat/eslint-config": "^2.2.2",
     "@types/express": "^5.0.6",
     "@types/node": "^22.14.0",
+    "eslint": "^8.57.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.2"
   },
   "dependencies": {
-    "eslint": "^9.23.0",
     "express": "^5.2.1",
     "helmet": "^8.1.0",
     "tsx": "^4.19.3"

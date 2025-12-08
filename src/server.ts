@@ -12,9 +12,9 @@ server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 server.use(express.static(path.join(__dirname, '../public')));
 
-server.use('/', router); 
-server.use(notFoundRequest); 
-server.use(errorHandler); 
+server.use('/', router);
+server.use(notFoundRequest);
+server.use(errorHandler);
 
 server.listen(3000, () => {
     console.log(`Server is running on http://localhost:3000`);
