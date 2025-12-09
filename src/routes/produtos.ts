@@ -12,6 +12,10 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
+    console.log(`PARAMS`, req.params);
+    console.log(`QUERY`, req.query);
+    console.log(`BODY`, req.body);
+    
     res.json({ produtos: [] });
 });
 
