@@ -1,24 +1,16 @@
 import express, { RequestHandler } from 'express';
 import produtosRouter from './produtos';
 import voosRouter from './voos';
+import { interferir } from '../middlewares/intervir';
 
 const router = express.Router();
+
+router.use(interferir);
 
 router.use('/produtos', produtosRouter);
 router.use('/voos', voosRouter);
 
-const interferir: RequestHandler = (req, res, next) => {
-    let logged = false
-    if (logged) {
-        console.log("Usuário logado, pode continuar.");
-        next();
-        return;
-    } else {
-        res.json({ message: "" });
-    }
-};
-
-router.get('/ping', interferir, (req, res) => {
+router.get('/ping', (req, res) => {
     console.log("Alguém deu um ping na nossa API.");
     res.json({ message: 'pong' });
 });
