@@ -7,6 +7,6 @@ export const interferir: RequestHandler = (req, res, next) => {
         next();
         return;
     } else {
-        res.json({ message: "Usuário não logado!" });
+        res.status(403).json({ message: "Usuário não logado!" });
     }
 };
