@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "express": "^5.2.1",
+    "fake-indexeddb": "^6.2.5",
     "helmet": "^8.1.0",
     "tsx": "^4.19.3"
   }
