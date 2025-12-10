@@ -9,8 +9,10 @@ const exec = async () => {
   //   await writeFile("./teste.txt", listTxt);
   //   console.log("Arquivo escrito com sucesso!");
 
+  const fileName = './teste.txt'
+
   // Lê o conteúdo do arquivo 'teste.txt' de forma assíncrona
-  const fileContent = await readFile("./teste.txt", "utf-8");
+  const fileContent = await readFile(fileName, "utf-8");
   console.log("Conteúdo do arquivo lido:");
   // Exibe o conteúdo lido do arquivo no console
   console.log(fileContent);
@@ -25,7 +27,7 @@ const exec = async () => {
   const listTxt = listFromFile.join("\n");
 
   // Escreve o novo conteúdo (com o item adicionado) de volta no arquivo 'teste.txt'
-  await writeFile("./teste.txt", listTxt);
+  await writeFile(fileName, listTxt);
   console.log("Arquivo escrito com sucesso!");
 };
 
